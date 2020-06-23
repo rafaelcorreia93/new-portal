@@ -1,0 +1,9 @@
+<div *ngIf="isHome">
+    <app-perfil></app-perfil>
+</div>
+<div *ngIf="!isHome" routerLink="/home">
+    <div class="title">
+        <img src="assets/icons/arrow-left.svg" alt="voltar">
+        <h1>{{ rota }}</h1>
+    </div>
+</div>

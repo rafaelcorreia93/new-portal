@@ -1,0 +1,7 @@
+<div class="profile" (click)="changeStatus()">
+    <h1>Rafael Correia</h1>
+    <img src="assets/icons/arrow-bold.svg" alt="expandir">
+    <div class="profile-content" [class.expanded]="expanded">
+        <span *ngIf="expanded">lista</span>
+    </div>
+</div>

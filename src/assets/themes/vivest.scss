@@ -1,0 +1,89 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$vivest-primary: (
+50 : #e8e6f1,
+100 : #c5c0db,
+200 : #9e97c4,
+300 : #776dac,
+400 : #594d9a,
+500 : #3c2e88,
+600 : #362980,
+700 : #2e2375,
+800 : #271d6b,
+900 : #1a1258,
+A100 : #9b90ff,
+A200 : #6d5dff,
+A400 : #3e2aff,
+A700 : #2711ff,
+contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+));
+
+$vivest-accent: (
+    50 : #fce8eb,
+    100 : #f7c5ce,
+    200 : #f19fad,
+    300 : #eb788c,
+    400 : #e75b73,
+    500 : #e33e5a,
+    600 : #e03852,
+    700 : #dc3048,
+    800 : #d8283f,
+    900 : #d01b2e,
+    A100 : #ffffff,
+    A200 : #ffd2d6,
+    A400 : #ff9fa7,
+    A700 : #ff8590,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$vivest-palette-primary: mat-palette($vivest-primary);
+$vivest-palette-accent:  mat-palette($vivest-accent);
+
+// The warn palette is optional (defaults to red).
+$vivest-palette-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$vivest-palette-theme: mat-light-theme($vivest-palette-primary, $vivest-palette-accent, $vivest-palette-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($vivest-palette-theme);

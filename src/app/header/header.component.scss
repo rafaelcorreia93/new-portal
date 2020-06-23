@@ -1,0 +1,74 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.icon-menu {
+    min-width: 81px;
+    display: flex;
+    img {
+        width: 1.5em;
+    }
+    cursor: pointer;
+}
+
+.logo {
+    img {
+        width: 10em;
+    }
+}
+
+.notifications-link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span:first-child {
+        margin-right: 12px;
+    }
+    img {
+        width: 1.5em;
+        position: relative;
+    }
+    .notification-tip {
+        display: none;
+        position: absolute;
+        width: 0.5em;
+        height: 0.5em;
+        background: #E33E5A;
+        border-radius: 50%;
+        top: 0;
+        right: 0;
+    }
+
+    .notification-icon {
+        position: relative;
+
+    }
+    .notification-icon.with-notifications .notification-tip {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    
+    .notifications-link {
+        span:first-child {
+            display: none;
+        }
+    }
+
+    .icon-menu {
+        min-width: 0;
+    }
+}
+  
