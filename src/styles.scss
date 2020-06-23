@@ -52,3 +52,21 @@ div {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.banner-connection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 5px 10px;
+  text-align: center;
+  box-sizing: border-box;
+  background: #e65555;
+  color: #ffff;
+  text-shadow: 1px 1px 1px #670000;
+
+  &.connected {
+    background: #43bb4c;
+    text-shadow: none;
+  }
+}

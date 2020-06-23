@@ -17,17 +17,15 @@ export class AppComponent {
       this.isConnected = isConnected;
       if (this.isConnected) {
         this.status = "ONLINE";
+        this.showBanner = true;
         setTimeout(() => {
-          this.showBanner = true;
+          this.showBanner = false;
         }, 3000);
       }
       else {
         this.status = "OFFLINE";
-        setTimeout(() => {
-          this.showBanner = true;
-        }, 3000);
+        this.showBanner = true;
       }
-      this.showBanner = false;
     })
   }
 }

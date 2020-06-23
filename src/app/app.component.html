@@ -1,2 +1,2 @@
-<div *ngIf="showBanner">Você está {{ status }}</div>
+<div *ngIf="showBanner" class="banner-connection" [class.connected]="isConnected">Você está {{ status }}</div>
 <router-outlet></router-outlet>
